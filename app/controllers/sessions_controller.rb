@@ -5,7 +5,14 @@ class SessionsController < ApplicationController
             .try(:authenticate), params["user"]["password"])
     if user
       session[:user_if] = user.id
-    end
+      render json: {
+        status: :created,
+        logged_in: true,
+        user: user
+      }
+    else
+      render json: { status: 401 }
+    end    
   end
 
 
