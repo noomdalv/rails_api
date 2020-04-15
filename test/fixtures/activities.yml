@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  duration: 9.99
+  user: one
+  record: one
+
+two:
+  name: MyString
+  duration: 9.99
+  user: two
+  record: two
