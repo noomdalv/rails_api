@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :records
-  has_many :activities, through: :records
+  has_many :record_details, through: :records
   before_save { email.downcase! }
   has_secure_password
 
