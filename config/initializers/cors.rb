@@ -1,7 +1,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "http://reactactivitytracker.herokuapp.com"
+    origins "https://reactactivitytracker.herokuapp.com"
     resource "*", headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head],
-                  credentials: true
+    credentials: true
   end
 end
