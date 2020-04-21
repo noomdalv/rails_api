@@ -1,3 +1,8 @@
-Rails.application.config.session_store :cookie_store,
+if Rails.env == "production"
+  Rails.application.config.session_store :cookie_store,
   key: "_authentication_app",
-  domain: "https://reactactivitytracker.herokuapp.com/"
+  domain: "https://activitytrackerapi.herokuapp.com"
+else
+  Rails.application.config.session_store :cookie_store,
+  key: "_authentication_app"
+end
