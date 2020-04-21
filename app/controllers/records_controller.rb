@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-  include CurrentUserConcern
+  include CurrentUserConcern  
 
   def create
     if @current_user
