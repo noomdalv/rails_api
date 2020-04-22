@@ -18,7 +18,11 @@ class RegistrationsController < ApplicationController
         }
       }
     else
-      render json: { status: 500 }
+      render json: {
+        status: 500,
+        user: user,
+        errors: user.errors.messages
+      }
     end
   end
 end
