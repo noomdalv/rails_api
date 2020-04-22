@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :registrations, only: [:create]
   resources :records, only: [:create, :index]
   delete :logout, to: "sessions#logout"
-  get :logged_in, to: "sessions#logged_in"
+  post :logged_in, to: "sessions#logged_in"
   root 'welcome#index'
 end
