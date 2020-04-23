@@ -1,6 +1,6 @@
 # Capstone Project: Ruby on Rails API
 
-> This project application is aimed to build a fully functional API with Ruby on Rails and to be used as a production back-end database, it supports user registration and entry records for the [React Activity Tracker] application and implements user authentication via session cookies in the web browser.
+> This project application is aimed to build a fully functional API with Ruby on Rails and to be used as a production back-end database, it supports user registration and entry records for the [React Activity Tracker](https://github.com/noomdalv/react_activity_tracker) application and implements user authentication via session cookies in the web browser.
 
 ## Built With
 
@@ -36,7 +36,7 @@ cd rails_api
 bundle install
 ```
 
-### DB and Server start
+### DB and Server Start
 
 ```console
 rails db:create && rails db:migrate
