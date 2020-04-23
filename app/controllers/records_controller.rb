@@ -1,4 +1,5 @@
 class RecordsController < ApplicationController
+
   def create
     user = User.find(params["user"]['id'])
     if user
@@ -32,7 +33,7 @@ class RecordsController < ApplicationController
         status: :success,
         records: user.records,
         record_details: user.record_details,
-        params: params
+        params: params,
       }
     else
       render json: {
