@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-  include CurrentUserConcern
-
   def create
     user = User
             .find_by(email: params["user"]["email"])
@@ -10,28 +8,41 @@ class SessionsController < ApplicationController
       render json: {
         status: :created,
         logged_in: true,
-        user: user
+        user: {
+          data: user,
+          records: user.records,
+          record_details: user.record_details,
+          current_user: user,
+          session: session
+        },
       }
     else
-      render json: { status: 401 }
+      render json: {
+        status: "error",
+      }
     end
   end
 
   def logged_in
-    if @current_user
+    user ||=  User.find_by(id: params["user"]["id"])
+    if user
       render json: {
         logged_in: true,
-        user: @current_user
+        user: {
+          data: user,
+          records: user.records,
+          record_details: user.record_details
+        }
       }
     else
       render json: {
-        logged_in: false
+        logged_in: false,
+        message: 'user not found'
       }
     end
   end
 
   def logout
-    reset_session
     render json: {
       status: 200,
       logged_out: true

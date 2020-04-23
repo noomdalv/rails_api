@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sleep: 9.99
+  work: 9.99
+  exercise: 9.99
+  leisure: 9.99
+  user: one
+  record: one
+
+two:
+  sleep: 9.99
+  work: 9.99
+  exercise: 9.99
+  leisure: 9.99
+  user: two
+  record: two
