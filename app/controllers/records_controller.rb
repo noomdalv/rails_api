@@ -21,7 +21,8 @@ class RecordsController < ApplicationController
           records: user.records,
           data: user,
           record_details: user.record_details
-        }
+        },
+        params: params
       }
     end
   end
