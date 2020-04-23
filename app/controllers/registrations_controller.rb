@@ -18,9 +18,7 @@ class RegistrationsController < ApplicationController
       }
     else
       render json: {
-        status: 500,
-        user: user,
-        errors: user.errors.messages
+        status: "user creation error",
       }
     end
   end
