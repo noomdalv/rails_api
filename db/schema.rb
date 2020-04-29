@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2020_04_19_003635) do
   enable_extension "plpgsql"
 
   create_table "record_details", force: :cascade do |t|
-    t.decimal "sleep", precision: 4, scale: 2
-    t.decimal "work", precision: 4, scale: 2
-    t.decimal "exercise", precision: 4, scale: 2
-    t.decimal "leisure", precision: 4, scale: 2
+    t.string "sleep"
+    t.string "work"
+    t.string "exercise"
+    t.string "leisure"
     t.bigint "user_id", null: false
     t.bigint "record_id", null: false
     t.datetime "created_at", precision: 6, null: false

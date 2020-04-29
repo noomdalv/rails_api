@@ -12,8 +12,6 @@ class SessionsController < ApplicationController
           data: user,
           records: user.records,
           record_details: user.record_details,
-          current_user: user,
-          session: session
         },
       }
     else
