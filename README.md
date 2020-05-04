@@ -51,6 +51,7 @@ rails server
 👤 **Vladimir Luna**
 
 - Github: [@noomdalv](https://github.com/noomdalv)
+- Email: vladlunasan@gmail.com
 
 ## Show your support
 
@@ -60,4 +61,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
-​
